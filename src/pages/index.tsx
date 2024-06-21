@@ -31,7 +31,7 @@ export default function Home() {
         <title>キキボタン</title>
         <meta httpEquiv="Content-Language" content="ja" />
       </Head>
-      ;
+
       <div className="h-screen w-full flex items-center justify-center">
         <button
           onClick={handlePlayer}
@@ -44,7 +44,10 @@ export default function Home() {
           src="img/kiki.png"
           className={`h-64 w-64  transition-transform transform duration-200 object-contain  ${scale ? "scale-[1000%]" : "scale-[0%]"}`}
         />
-        <audio ref={audioRef} src="/audio/kiki_1.mp3" />
+        <audio
+          ref={audioRef}
+          src="https://github.com/project774fan/kiki-btn/blob/main/public/audio/kiki_1.mp3"
+        />
       </div>
     </>
   );
