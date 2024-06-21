@@ -28,7 +28,6 @@ export default function Home() {
   return (
     <>
       <Head>
-        {/* <link rel="icon" href={favicon.src} /> */}
         <title>キキボタン</title>
         <meta httpEquiv="Content-Language" content="ja" />
       </Head>
