@@ -30,6 +30,9 @@ export default function Home() {
       <Head>
         <title>キキボタン</title>
         <meta httpEquiv="Content-Language" content="ja" />
+
+        <meta name="twitter:site" content="@chinari819" />
+        <meta name="twitter:title" content="キキボタン" />
       </Head>
 
       <div className="h-screen w-full flex items-center justify-center">
