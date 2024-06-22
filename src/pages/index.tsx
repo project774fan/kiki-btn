@@ -45,7 +45,10 @@ export default function Home() {
           className={`h-64 w-64  transition-transform transform duration-200 object-contain  ${scale ? "scale-[1000%]" : "scale-[0%]"}`}
         />
         <audio ref={audioRef}>
-          <source src="/audio/kiki.mp3" type="audio/mpeg"></source>
+          <source
+            src="https://drive.google.com/uc?export=download&id=1jdmMcEWZlGyhCjLXErcIb5q2Dnyq5rkU"
+            type="audio/mpeg"
+          ></source>
         </audio>
       </div>
     </>
