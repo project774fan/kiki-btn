@@ -44,10 +44,7 @@ export default function Home() {
           src="img/kiki.png"
           className={`h-64 w-64  transition-transform transform duration-200 object-contain  ${scale ? "scale-[1000%]" : "scale-[0%]"}`}
         />
-        <audio
-          ref={audioRef}
-          src="https://github.com/project774fan/kiki-btn/blob/21969a79616a7eddddf4bb8261fc921be1be151c/public/audio/kiki.mp3"
-        />
+        <audio ref={audioRef} src="public/audio/kiki.mp3" />
       </div>
     </>
   );
