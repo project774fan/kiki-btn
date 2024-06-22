@@ -42,7 +42,7 @@ export default function Home() {
         </button>
         <img
           src="img/kiki.png"
-          className={`h-64 w-64  transition-transform transform duration-200 object-contain  ${scale ? "scale-[1000%]" : "scale-[0%]"}`}
+          className={`h-64 w-64  transition-transform transform duration-200 object-contain  ${scale ? "sm:scale-[1000%] scale-[500%]" : "scale-[0%]"}`}
         />
         <audio ref={audioRef}>
           <source
