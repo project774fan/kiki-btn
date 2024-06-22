@@ -43,7 +43,7 @@ export default function Home() {
         <meta name="twitter:title" content="キキボタン" />
         <meta
           name="twitter:image"
-          content="https://github.com/project774fan/kiki-btn/blob/main/public/img/puppet.png"
+          content="https://raw.githubusercontent.com/project774fan/kiki-btn/main/public/img/puppet.png"
         />
       </Head>
 
