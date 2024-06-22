@@ -1,6 +1,6 @@
 import Image from "next/image";
 import { Inter } from "next/font/google";
-import { useRef, useState } from "react";
+import { useEffect, useRef, useState } from "react";
 import Head from "next/head";
 
 const inter = Inter({ subsets: ["latin"] });
@@ -24,6 +24,14 @@ export default function Home() {
       setScale(false);
     }, 300);
   };
+
+  const [boolean, setBoolean] = useState<boolean>();
+  useEffect(() => {
+    const getRandomBoolean = () => {
+      return Math.random() < 0.5; // 0から1の範囲でランダムな数を生成し、その値が0.5未満ならtrue、それ以外ならfalseを返す
+    };
+    setBoolean(getRandomBoolean());
+  }, [handlePlayer]);
 
   return (
     <>
@@ -49,7 +57,7 @@ export default function Home() {
         />
         <audio ref={audioRef}>
           <source
-            src="https://project774fan.github.io/kiki-btn/audio/kiki.mp3"
+            src={`https://project774fan.github.io/kiki-btn/audio/${boolean ? "kiki_1" : "kiki_2"}.mp3`}
             type="audio/mpeg"
           ></source>
         </audio>
