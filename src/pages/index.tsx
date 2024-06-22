@@ -46,7 +46,7 @@ export default function Home() {
         />
         <audio ref={audioRef}>
           <source
-            src="https://drive.google.com/uc?export=download&id=1jdmMcEWZlGyhCjLXErcIb5q2Dnyq5rkU"
+            src="https://project774fan.github.io/kiki-btn/audio/kiki.mp3"
             type="audio/mpeg"
           ></source>
         </audio>
