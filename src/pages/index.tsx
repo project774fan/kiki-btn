@@ -38,9 +38,13 @@ export default function Home() {
       <Head>
         <title>キキボタン</title>
         <meta httpEquiv="Content-Language" content="ja" />
-
+        <meta name="twitter:card" content="summary" />
         <meta name="twitter:site" content="@chinari819" />
         <meta name="twitter:title" content="キキボタン" />
+        <meta
+          name="twitter:image"
+          content="https://github.com/project774fan/kiki-btn/blob/main/public/img/puppet.png"
+        />
       </Head>
 
       <div className="flex h-screen w-full items-center justify-center">
