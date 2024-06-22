@@ -46,7 +46,7 @@ export default function Home() {
         />
         <audio
           ref={audioRef}
-          src="https://github.com/project774fan/kiki-btn/blob/main/public/audio/kiki_1.mp3"
+          src="https://github.com/project774fan/kiki-btn/blob/21969a79616a7eddddf4bb8261fc921be1be151c/public/audio/kiki.mp3"
         />
       </div>
     </>
