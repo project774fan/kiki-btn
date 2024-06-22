@@ -43,17 +43,17 @@ export default function Home() {
         <meta name="twitter:title" content="キキボタン" />
       </Head>
 
-      <div className="h-screen w-full flex items-center justify-center">
+      <div className="flex h-screen w-full items-center justify-center">
         <button
           onClick={handlePlayer}
-          className=" absolute  fles flex justify-center items-center hover:scale-105"
+          className="fles absolute flex items-center justify-center hover:scale-105"
         >
-          <p className=" absolute">▶</p>
-          <img src="img/puppet.png" className={`h-12 w-12  `} />
+          <p className="absolute">▶</p>
+          <img src="img/puppet.png" className={`h-12 w-12`} />
         </button>
         <img
           src="img/kiki.png"
-          className={`h-64 w-64  transition-transform transform duration-200 object-contain  ${scale ? "sm:scale-[1000%] scale-[500%]" : "scale-[0%]"}`}
+          className={`h-64 w-64 transform object-contain transition-transform duration-200 ${scale ? "scale-[500%] sm:scale-[1000%]" : "scale-[0%]"}`}
         />
         <audio ref={audioRef}>
           <source
