@@ -52,7 +52,7 @@ export default function Home() {
           <img src="img/puppet.png" className={`h-12 w-12`} />
         </button>
         <img
-          src="img/kiki.png"
+          src="img/kiki.webp"
           className={`h-64 w-64 transform object-contain transition-transform duration-200 ${scale ? "scale-[500%] sm:scale-[1000%]" : "scale-[0%]"}`}
         />
         <audio ref={audioRef}>
