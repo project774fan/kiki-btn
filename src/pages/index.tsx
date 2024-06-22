@@ -13,7 +13,13 @@ export default function Home() {
   const [scale, setScale] = useState(false);
 
   const handlePlayer = () => {
+    const getRandomBoolean = () => {
+      return Math.random() < 0.5;
+    };
+    const randomBoolean = getRandomBoolean();
+
     if (audioRef.current) {
+      audioRef.current.src = `https://project774fan.github.io/kiki-btn/audio/${randomBoolean ? "kiki_1" : "kiki_2"}.mp3`;
       audioRef.current.currentTime = 0;
       audioRef.current.play();
     }
@@ -23,15 +29,9 @@ export default function Home() {
     setTimeout(() => {
       setScale(false);
     }, 300);
-  };
 
-  const [boolean, setBoolean] = useState<boolean>();
-  useEffect(() => {
-    const getRandomBoolean = () => {
-      return Math.random() < 0.5; // 0から1の範囲でランダムな数を生成し、その値が0.5未満ならtrue、それ以外ならfalseを返す
-    };
-    setBoolean(getRandomBoolean());
-  }, [handlePlayer]);
+    console.log("ドカーン", randomBoolean ? "kiki_1" : "kiki_2");
+  };
 
   return (
     <>
@@ -46,7 +46,7 @@ export default function Home() {
       <div className="flex h-screen w-full items-center justify-center">
         <button
           onClick={handlePlayer}
-          className="fles absolute flex items-center justify-center hover:scale-105"
+          className="absolute flex items-center justify-center hover:scale-105"
         >
           <p className="absolute">▶</p>
           <img src="img/puppet.png" className={`h-12 w-12`} />
@@ -56,10 +56,7 @@ export default function Home() {
           className={`h-64 w-64 transform object-contain transition-transform duration-200 ${scale ? "scale-[500%] sm:scale-[1000%]" : "scale-[0%]"}`}
         />
         <audio ref={audioRef}>
-          <source
-            src={`https://project774fan.github.io/kiki-btn/audio/${boolean ? "kiki_1" : "kiki_2"}.mp3`}
-            type="audio/mpeg"
-          ></source>
+          <source type="audio/mpeg"></source>
         </audio>
       </div>
     </>
