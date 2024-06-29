@@ -38,7 +38,7 @@ export default function Home() {
 
     setTimeout(() => {
       setScale(false);
-    }, 400);
+    }, 450);
   };
 
   return (
@@ -65,7 +65,7 @@ export default function Home() {
         </button>
         <img
           src="img/kiki.webp"
-          className={`h-64 w-64 transform object-contain transition-transform duration-300 ${scale ? "scale-[500%] sm:scale-[1000%]" : "scale-[0%]"}`}
+          className={`h-64 w-64 transform object-contain transition-transform duration-300 ${scale ? "scale-[500%] sm:scale-[700%]" : "scale-[0%]"}`}
         />
         <audio ref={audioRef}>
           <source type="audio/mpeg"></source>
