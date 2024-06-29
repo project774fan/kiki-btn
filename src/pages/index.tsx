@@ -13,7 +13,7 @@ export default function Home() {
   const [scale, setScale] = useState(false);
 
   useEffect(() => {
-    const preloadAudio = (url: any) => {
+    const preloadAudio = (url: string) => {
       const audio = new Audio();
       audio.src = url;
     };
