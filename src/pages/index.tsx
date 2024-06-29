@@ -12,6 +12,16 @@ export default function Home() {
   const audioRef = useRef<HTMLAudioElement>(null);
   const [scale, setScale] = useState(false);
 
+  useEffect(() => {
+    const preloadAudio = (url: any) => {
+      const audio = new Audio();
+      audio.src = url;
+    };
+
+    preloadAudio("https://project774fan.github.io/kiki-btn/audio/kiki_1.mp3");
+    preloadAudio("https://project774fan.github.io/kiki-btn/audio/kiki_2.mp3");
+  }, []);
+
   const handlePlayer = () => {
     const getRandomBoolean = () => {
       return Math.random() < 0.5;
@@ -29,8 +39,6 @@ export default function Home() {
     setTimeout(() => {
       setScale(false);
     }, 400);
-
-    console.log("ドカーン", randomBoolean ? "kiki_1" : "kiki_2");
   };
 
   return (
